@@ -8,7 +8,7 @@ const onePageArticleCount = 10;
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-app.get("/newFeeds/", (req, res) => {
+app.get("/newFeeds", (req, res) => {
   let limit =
     isNaN(req.query.limit) || !req.query.limit
       ? onePageArticleCount
