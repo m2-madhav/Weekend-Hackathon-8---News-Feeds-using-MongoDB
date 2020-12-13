@@ -24,7 +24,7 @@ app.get("/newFeeds/", (req, res) => {
     .find()
     .limit(limit)
     .skip(offset)
-    .then((newFeed) => res.send(newFeed));
+    .then((newFeed) => res.status(200).send(newFeed));
   return;
 });
 
